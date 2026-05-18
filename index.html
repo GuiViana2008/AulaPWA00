@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EcoMaps</title>
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <!-- PWA -->
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <!-- COR -->
+    <meta
+        name="theme-color"
+        content="#123524"
+    >
+
+    <!-- ÍCONE -->
+    <link
+        rel="icon"
+        href="/imagem/ecologia.jpg"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-side">
+
+        <div class="content">
+
+            <h1>EcoMaps</h1>
+
+            <h2>
+                Transformando resíduos em responsabilidade.
+            </h2>
+
+            <p>
+                Descarte sustentável, moderno e inteligente.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="right-side">
+
+        <form class="login-box">
+
+            <h2>Login</h2>
+
+            <span>
+                Entre com suas informações
+            </span>
+
+            <div class="input-box">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    placeholder="Digite seu email"
+                >
+
+            </div>
+
+            <div class="input-box">
+
+                <label>Senha</label>
+
+                <input
+                    type="password"
+                    placeholder="Digite sua senha"
+                >
+
+            </div>
+
+            <button type="submit">
+                Entrar
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+
+if ('serviceWorker' in navigator) {
+
+    window.addEventListener('load', () => {
+
+        navigator.serviceWorker
+            .register('./service-worker.js')
+
+            .then(() => {
+
+                console.log('PWA funcionando')
+
+            })
+
+            .catch(error => {
+
+                console.log(error)
+
+            })
+
+    })
+
+}
+
+</script>
+
+</body>
+</html>
